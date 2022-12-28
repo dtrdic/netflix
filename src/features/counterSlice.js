@@ -1,14 +1,12 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   value: 0,
-  status: 'idle',
+  status: "idle",
 };
 
-
 export const counterSlice = createSlice({
-  name: 'counter',
+  name: "counter",
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
@@ -27,7 +25,6 @@ export const counterSlice = createSlice({
       state.value += action.payload;
     },
   },
-
 });
 
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;
